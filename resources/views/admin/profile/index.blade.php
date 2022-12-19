@@ -39,7 +39,7 @@
                                         <div class="col-md-6">
                                             <div class="input__group mb-25">
                                                 <label for="name">{{__('Name')}} <span class="text-danger">*</span></label>
-                                                <input type="text" name="name" id="name" value="{{auth::user()->name}}" placeholder="{{__('Name')}}" class="form-control">
+                                                <input type="text" name="name" id="name" value="{{Auth::user()->name}}" placeholder="{{__('Name')}}" class="form-control">
                                                 @if ($errors->has('name'))
                                                     <span class="text-danger"><i class="fas fa-exclamation-triangle"></i> {{ $errors->first('name') }}</span>
                                                 @endif
@@ -48,7 +48,7 @@
                                         <div class="col-md-6">
                                             <div class="input__group mb-25">
                                                 <label for="phone_number">{{__('Phone Number')}} <span class="text-danger">*</span></label>
-                                                <input type="text" name="phone_number" id="phone_number" value="{{auth::user()->phone_number}}" placeholder="{{__('Phone Number')}}" class="form-control">
+                                                <input type="text" name="phone_number" id="phone_number" value="{{Auth::user()->phone_number}}" placeholder="{{__('Phone Number')}}" class="form-control">
                                                 @if ($errors->has('phone_number'))
                                                     <span class="text-danger"><i class="fas fa-exclamation-triangle"></i> {{ $errors->first('phone_number') }}</span>
                                                 @endif
@@ -59,7 +59,7 @@
                                         <div class="col-md-6">
                                             <div class="input__group mb-25">
                                                 <label for="address">{{__('Email')}} <span class="text-danger">*</span></label>
-                                                <input type="text" name="email" id="email" value="{{auth::user()->email}}" placeholder="Email" class="form-control">
+                                                <input type="text" name="email" id="email" value="{{Auth::user()->email}}" placeholder="Email" class="form-control">
                                                 @if ($errors->has('email'))
                                                     <span class="text-danger"><i class="fas fa-exclamation-triangle"></i> {{ $errors->first('email') }}</span>
                                                 @endif
@@ -68,7 +68,7 @@
                                         <div class="col-md-6">
                                             <div class="input__group mb-25">
                                                 <label for="address">{{__('Address')}} <span class="text-danger">*</span></label>
-                                                <textarea name="address" id="address" class="form-control" placeholder="{{__('Address')}}">{{auth::user()->address}}</textarea>
+                                                <textarea name="address" id="address" class="form-control" placeholder="{{__('Address')}}">{{Auth::user()->address}}</textarea>
                                                 @if ($errors->has('address'))
                                                     <span class="text-danger"><i class="fas fa-exclamation-triangle"></i> {{ $errors->first('address') }}</span>
                                                 @endif
@@ -79,8 +79,8 @@
 
                                 <div class="col-md-3">
                                     <div class="upload-img-box mb-25 overflow-hidden">
-                                        @if(auth()->user()->image)
-                                            <img src="{{getImageFile(auth()->user()->image)}}" alt="img" class="img-fluid">
+                                        @if(Auth()->user()->image)
+                                            <img src="{{getImageFile(Auth()->user()->image)}}" alt="img" class="img-fluid">
                                         @else
                                             <img src="" alt="img">
                                         @endif
