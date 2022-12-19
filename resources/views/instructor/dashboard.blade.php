@@ -2,7 +2,7 @@
 
 @section('breadcrumb')
     <div class="page-banner-content text-center">
-        <h3 class="page-banner-heading text-white pb-15">Hey, {{auth::user()->instructor ? auth::user()->instructor->name : ''  }} <img
+        <h3 class="page-banner-heading text-white pb-15">Hey, {{Auth::user()->instructor ? Auth::user()->instructor->name : ''  }} <img
                 src="{{asset('frontend/assets/img/student-profile-img/waving-hand.png')}}" alt="student" class="me-2"></h3>
 
         <!-- Breadcrumb Start-->
