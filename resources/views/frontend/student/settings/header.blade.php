@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12">
                         <div class="page-banner-content text-center">
-                            <h3 class="page-banner-heading color-heading pb-15">Hey, {{ auth::user()->name }} <img src="{{ asset('frontend/assets/img/student-profile-img/waving-hand.png') }}" alt="student" class="me-2"></h3>
+                            <h3 class="page-banner-heading color-heading pb-15">Hey, {{ Auth::user()->name }} <img src="{{ asset('frontend/assets/img/student-profile-img/waving-hand.png') }}" alt="student" class="me-2"></h3>
 
                             <!-- Breadcrumb Start-->
                             <nav aria-label="breadcrumb">

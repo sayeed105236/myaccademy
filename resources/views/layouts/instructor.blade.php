@@ -92,6 +92,9 @@
     <![endif]-->
     @toastr_css
 
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/updatedTheme.css') }}">
+
+
 </head>
 
 <body class="bg-page {{selectedLanguage()->rtl == 1 ? 'direction-rtl' : 'direction-ltr' }} ">
@@ -105,7 +108,7 @@
 @endif
 
 <!--Main Menu/Navbar Area Start -->
-@include('frontend.layouts.navbar')
+ @include('frontend.layouts.navbar')
 <!--Main Menu/Navbar Area Start -->
 
 <!-- Page Header Start -->
