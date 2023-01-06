@@ -29,7 +29,26 @@ Route::post('reset-password', [LoginController::class, 'resetPasswordCheck'])->n
 Route::get('user/email/verify/{token}', [RegistrationController::class, 'emailVerification'])->name('user.email.verification')->middleware('isDemo');
 
 
-Route::get('/', [MainIndexController::class, 'index'])->name('main.index');
+Route::get('/', function () {
+    if (session('password_entered')) {
+        return Redirect::route('main.index');
+    }
+
+    return view('enter_password_page');
+});
+
+Route::post('/', function () {
+    $password_to_website = 'RedMonkey5Dmark#iii';
+    $password = request('password_field');
+
+    if ($password && $password === $password_to_website) {
+        session(['password_entered' => true]);
+        return Redirect::route('main.index');
+    }
+
+    return back()->withInput()->withErrors(['password' => 'Password is incorect']);
+});
+Route::get('/homepage', [MainIndexController::class, 'index'])->name('main.index');
 
 Route::get('about-us', [MainIndexController::class, 'aboutUs'])->name('about');
 Route::get('contact-us', [MainIndexController::class, 'contactUs'])->name('contact');
