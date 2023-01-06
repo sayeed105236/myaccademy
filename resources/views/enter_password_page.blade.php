@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    
 
 </head>
 
@@ -53,11 +53,11 @@
             <div class="row s-header__inner">
                 <div class="column lg-12 s-header__block">
 
-                    <div class="s-header__logo">
+                    <!-- <div class="s-header__logo">
                         <a class="logo" href="index.html">
                             <img src="images/logo.svg" alt="Homepage">
                         </a>
-                    </div>
+                    </div> -->
 
 
 
